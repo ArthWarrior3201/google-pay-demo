@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pay API Interactive Demo Sandbox</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .sandbox-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #202124;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .notice-box {
+            background-color: #e8f0fe;
+            color: #1967d2;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            border: 1px solid #d2e3fc;
+        }
+        .info-text {
+            color: #5f6368;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        /* Container where Google's official dynamic button element renders */
+        #google-pay-container {
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        /* Custom barebones activation trigger fallback button */
+        .gpay-fallback-btn {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3);
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gpay-fallback-btn:hover {
+            background-color: #202124;
+        }
+        .gpay-fallback-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sandbox-card">
+        <h1>Google Pay API Test Studio</h1>
+        
+        <!-- Public Disclaimer Notice Box -->
+        <div class="notice-box">
+            ℹ️ This is a real interactive demo environment simulation. Everything here is fake, completely isolated from real production rails, and provided officially via the Google Pay Web framework specifications. Your real bank or credit card account will NOT be charged.
+        </div>
+
+        <p class="info-text">
+            Use the official interface target mechanism below to trigger the secure framework initialization and observe the test wallet structure parameters.
+        </p>
+
+        <!-- Placeholder container for standard framework injection integration -->
+        <div id="google-pay-container"></div>
+
+        <!-- Explicit direct script invocation framework switch -->
+        <button class="gpay-fallback-btn" onclick="onGooglePaymentButtonClicked()">
+            Pay with Google Pay
+        </button>
+    </div>
+
+    <!-- Load Google's Official Payment Script Infrastructure -->
+    <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+    
+    <!-- External script controller linking engine code -->
+    <script src="script.js"></script>
+
+</body>
+</html>
