@@ -109,11 +109,14 @@ function onGooglePayLoaded() {
  */
 function addGooglePayButton() {
   const paymentsClient = getGooglePaymentsClient();
+  
+  // FIXED STYLING FOR THE OFFICIAL BUTTON TO RENDER PRECISELY:
   const button = paymentsClient.createButton({
-    buttonColor: 'default',
-    buttonType: 'buy',
+    buttonColor: 'black', // Gives it the professional dark style
+    buttonType: 'buy',    // Sets it to the official "Buy with G Pay" asset format
     onClick: onGooglePaymentButtonClicked
   });
+  
   document.getElementById('container').appendChild(button);
 }
 
