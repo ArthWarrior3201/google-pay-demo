@@ -37,12 +37,18 @@
         }
         .notice-text { color: #1967d2; font-size: 13px; font-weight: 500; margin: 0; }
         
-        /* Container where Google's official payment button will render */
+        /* FIXED CSS: Forces the Google Pay button layout engine to render at standard size */
         #container {
-            min-height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height: 48px;
+            width: 240px;
+            margin: 0 auto;
+            display: block;
+        }
+        /* Targets the button structure injected by Google's script */
+        #container > gpay-button, #container > div {
+            width: 100% !important;
+            height: 48px !important;
+            min-height: 48px !important;
         }
     </style>
 </head>
@@ -58,14 +64,14 @@
             </p>
         </div>
 
-        <!-- Official Google Pay Button Container -->
+        <!-- Official Google Pay Button Target Node -->
         <div id="container"></div>
     </div>
 
-    <!-- STEP 1: Download Google's Core script engine library -->
-    <script async src="https://google.com" onload="onGooglePayLoaded()"></script>
+    <!-- Download Google's core SDK script -->
+    <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
     
-    <!-- STEP 2: Execute configuration architecture handlers -->
+    <!-- Core logic handlers -->
     <script src="script.js"></script>
 </body>
 </html>
