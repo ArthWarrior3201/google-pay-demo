@@ -37,7 +37,7 @@ function getGooglePaymentDataRequest() {
   paymentDataRequest.allowedPaymentMethods = [cardPaymentMethod];
   paymentDataRequest.transactionInfo = getGoogleTransactionInfo();
   paymentDataRequest.merchantInfo = {
-    merchantName: 'Google Pay Demo'
+    merchantName: 'Google Developers Community'
   };
   return paymentDataRequest;
 }
